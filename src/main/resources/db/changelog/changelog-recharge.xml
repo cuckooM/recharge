@@ -8,7 +8,15 @@
 
     <changeSet id="1" author="cuckooM">
         <sql>
-
+            -- 话费订单表
+            CREATE TABLE IF NOT EXISTS tbl_order_phone (
+                id BIGSERIAL NOT NULL PRIMARY KEY,                   -- 自增主键
+                user_id VARCHAR(128) NOT NULL,                       -- 用户 ID
+                phone_number VARCHAR(32) NOT NULL,                   -- 手机号码
+                operator INT NOT NULL,                               -- 运营商
+                money NUMERIC NOT NULL,                              -- 金额
+                create_time TIMESTAMP NOT NULL                       -- 创建时间
+            )
         </sql>
     </changeSet>
 </databaseChangeLog>

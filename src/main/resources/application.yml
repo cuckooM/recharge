@@ -5,9 +5,9 @@ spring:
     name: recharge
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://10.2.196.11:5432/recharge
-    username: shterm
-    password: shterm
+    url: jdbc:postgresql://127.0.0.1:5432/recharge
+    username:
+    password:
   liquibase:
     change-log: classpath:/db/changelog/changelog-recharge.xml
   jpa:
